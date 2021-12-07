@@ -1,0 +1,52 @@
+// === Imports ===
+
+@import 'normalize.scss';
+
+// === /Imports ===
+
+// === Mixins ===
+
+
+@mixin font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin font-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin list-style-none{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// === /Mixins ===
+
+
+// === Common ===
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,p{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    @include font-montserrat;
+    background-color: rgb(145, 145, 109);
+}
+
+.section-inner{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+// === /Common ===
