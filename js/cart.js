@@ -71,9 +71,10 @@ const cart = function(){
     const renderCartGoods = function(goods){
         cartTableGoods.innerHTML = '';
         goods.forEach(good => {
-            console.log(good);
             const tr = document.createElement('tr')
             tr.innerHTML = `
+					
+            
                 <td>${good.name}</td>
                 <td>${good.price}</td>
                 <td><button class="cart-btn-minus"">-</button></td>
@@ -81,6 +82,8 @@ const cart = function(){
                 <td><button class="cart-btn-plus"">+</button></td>
                 <td>${good.price * good.count}$</td>
                 <td><button class="cart-btn-delete"">x</button></td>
+            
+                
             `
             cartTableGoods.append(tr);
 
@@ -93,6 +96,22 @@ const cart = function(){
                     deleteCartItem(good.id);
                 }
             })
+        })
+    }
+
+    const renderPrice = function(goods){
+        cartTableGoods.innerHTML = '';
+        goods.forEach(good => {
+            const div = document.createElement('div')
+            div.innerHTML = `
+					
+            
+            <p class="info-value">${good.price}$</p>
+            
+                
+            `
+            cartTableGoods.append(div);
+
         })
     }
 
@@ -114,6 +133,8 @@ const cart = function(){
     modalForm.addEventListener('submit' , function(event){
         sendForm();
         event.preventDefault();
+        window.location.href='./pay.html';
+        console.log('URA 2 po kursovoi');
         
     })
 
@@ -145,3 +166,6 @@ const cart = function(){
 }
 
 cart();
+
+// =========================================
+

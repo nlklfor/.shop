@@ -10,6 +10,11 @@
 @mixin font-readex{
     font-family: 'Readex Pro', sans-serif;
 }
+@mixin font-raleway{
+    font-family: 'Raleway', sans-serif;
+}
+
+
 
 @mixin list-style-none{
     list-style: none;
@@ -577,6 +582,154 @@ button {
     border-bottom-left-radius: 0;
 }
 
+.pay{
+    display: flex;
+}
+.info-payment{
+    .logo-link{
+        img{
+            padding-top: 20px;
+            width: 400px; 
+        }
+    }
+    .info-value{
+        font-size: 25px;
+        padding-top: 300px;
+        padding-bottom: 20px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.info-buttons{
+    display: flex;
+    flex-direction: column;
+}
+.info-method{
+    p{
+        padding-bottom: 20px;
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+    }
+}
+.card-method{
+    display: flex;
+    max-width: 300px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    border:rgba(43, 43, 43, 0.3) 1px solid;
+    background-color:rgba(197, 197, 197, 0.3);
+    border-radius: 10px;
+    padding: 10px 30px 10px 30px;
+}
+.card-method{
+    p{
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        padding: 10px 30px 10px 30px;
+        font-weight: bold;
+    }
+    display: flex;
+   
+    text-align: center;
+    justify-content: center;
+    border:rgba(43, 43, 43, 0.3) 1px solid;
+    background-color:rgba(197, 197, 197, 0.3);
+    border-radius: 10px;
+}
+.card-method{
+    
+    .img{
+        margin-right: 10px;
+    }
+}
+.apple-pay{
+    border:none;
+    border-radius: 15px;
+    padding: 15px 90px 15px 90px;
+    background-color: black;
+    margin-bottom: 20px;
+}
+.google-pay{
+    border:none;
+    border-radius: 15px;
+    padding: 15px 90px 15px 90px;
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+.card-payment{
+    margin: 0 auto;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 500px;
+    .card-pay{
+        border-radius: 25px;
+        background-image: radial-gradient(circle at -18.3% 68.3%, #41a45e 0, #25a56a 3.33%, #00a676 6.67%, #00a783 10%, #00a890 13.33%, #00a89d 16.67%, #00a8a9 20%, #00a7b5 23.33%, #00a7c1 26.67%, #00a6cb 30%, #00a4d5 33.33%, #00a3dd 36.67%, #00a0e3 40%, #009ee8 43.33%, #009bec 46.67%, #0c97ed 50%, #4893ed 53.33%, #668fea 56.67%, #7e8ae7 60%, #9385e1 63.33%, #a480da 66.67%, #b37bd1 70%, #c176c8 73.33%, #cc71bd 76.67%, #d56db1 80%, #dc6aa5 83.33%, #e16899 86.67%, #e5688d 90%, #e66880 93.33%, #e66a74 96.67%, #e46c68 100%);
+        img{
+            padding-top: 20px;
+            padding-left:380px;
+        }
+        .card-data{
+            margin-top: 40px;
+            margin-left: 40px;
+            margin-bottom: 50px;
+            .card-mm{
+                padding-bottom: 3px;
+                font-size: 15px;
+                font-weight: bold;
+                font-family: 'Raleway', sans-serif;
+            }
+            .card-number{
+                padding-bottom: 3px;
+                font-size: 16px;
+                font-weight: bold;
+                font-family: 'Raleway', sans-serif;
+            }
+            input{
+                background-color:rgba(0, 0, 0, 0);
+                border:none;
+                padding-bottom: 3px;
+                
+            }
+        }
+    }
+    .email-pay{
+        input{
+            margin-top: 30px;
+            margin-left: 120px;
+            padding: 10px 40px 10px 40px;
+            border-radius:10px;
+            border:grey 1px solid;
+            margin-bottom: 20px;
+        }
+        
+    }
+    .button-pay{
+        border-radius:10px;
+        border:none;
+        padding: 10px 50px 10px 50px;
+        font-size: 20px;
+        font-weight: bold;
+        color:white;
+        transition: .2s all;
+        font-family: 'Raleway', sans-serif;
+        background-color:rgb(36, 214, 190);
+        &:hover, 
+        &:focus,
+        &:active {
+            background-color:rgb(206, 79, 168);
+            content:'Оплачено'
+        }  
+    }
+}
 
 @media (max-width: 1200px) {
     .slide-1 {
